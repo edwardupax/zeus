@@ -71,7 +71,19 @@ public class Config {
         return PROPS.getProperty("deviceName");
     }
 
+    public static String getUserUpax(){
+        return System.getenv("USER_UPAX");
+    }
+
+    public static String getPasswordUpax(){
+        return System.getenv("PASSWORD_UPAX");
+    }
+
     public static String getApp() {
         return PROPS.getProperty("apps");
     }
+
+
+
+
 }

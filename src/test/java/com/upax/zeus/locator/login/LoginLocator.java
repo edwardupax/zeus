@@ -10,7 +10,7 @@ public class LoginLocator extends BaseLocator {
     @AndroidFindBy(id = "com.upax.zeusgeneric:id/zlo_button_key")
     public WebElement ingresaLlaveMaestraButton;
 
-    @AndroidFindBy(xpath = "//android.view.View[2]/android.view.View[1]/android.widget.EditText")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='input27']")
     public WebElement llaveMaestraTextbox;
 
     @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
@@ -21,6 +21,15 @@ public class LoginLocator extends BaseLocator {
 
     @AndroidFindBy(xpath = "//(//android.view.View[@content-desc=\"Seleccionar\"])[2]/android.widget.TextView")
     public WebElement botonSeleccionarPush;
+     @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='input105']")
+     public WebElement passwordTextbox;
+
+     @AndroidFindBy(className = "android.widget.FrameLayout")
+     public WebElement portada;
+
+     @AndroidFindBy(id = "com.upax.zeusgeneric:id/btnLeft")
+     public WebElement cancelarNotificacionesModalButton;
+
     public By getSiguienteButton(){
         return getButtonElement("Siguiente");
     }
