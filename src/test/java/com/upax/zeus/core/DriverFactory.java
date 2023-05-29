@@ -28,6 +28,7 @@ public class DriverFactory {
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, Config.getAutomationName());
         caps.setCapability(MobileCapabilityType.DEVICE_NAME, Config.getDeviceName());
         caps.setCapability(MobileCapabilityType.APP, Config.getAppPath(Config.getApp()));
+        caps.setCapability("noReset", false);
         return new AndroidDriver(new URL(Config.getAppiumServer()), caps);
     }
 
