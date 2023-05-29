@@ -27,7 +27,10 @@ public class DriverFactory {
         caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, Config.getPlatformVersion());
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, Config.getAutomationName());
         caps.setCapability(MobileCapabilityType.DEVICE_NAME, Config.getDeviceName());
-        caps.setCapability(MobileCapabilityType.APP, Config.getAppPath(Config.getApp()));
+        caps.setCapability("appPackage", "com.upax.zeusgeneric");
+        caps.setCapability("appActivity", ".uimodules.splash.ZGSplashActivity");
+        caps.setCapability("autoGrantPermissions", "true");
+        //caps.setCapability(MobileCapabilityType.APP, Config.getAppPath(Config.getApp()));
         return new AndroidDriver(new URL(Config.getAppiumServer()), caps);
     }
 
