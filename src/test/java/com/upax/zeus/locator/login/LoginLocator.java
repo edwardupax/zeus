@@ -19,6 +19,8 @@ public class LoginLocator extends BaseLocator {
     @AndroidFindBy(id = "com.android.permissioncontroller:id/permission_allow_foreground_only_button")
     public WebElement permitirAccesoAndroidButton;
 
+    @AndroidFindBy(xpath = "//(//android.view.View[@content-desc=\"Seleccionar\"])[2]/android.widget.TextView")
+    public WebElement botonSeleccionarPush;
      @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='input105']")
      public WebElement passwordTextbox;
 
@@ -31,8 +33,6 @@ public class LoginLocator extends BaseLocator {
     public By getSiguienteButton(){
         return getButtonElement("Siguiente");
     }
-
-
 
 
 }

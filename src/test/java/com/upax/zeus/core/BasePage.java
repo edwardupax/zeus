@@ -133,6 +133,7 @@ public class BasePage {
 
     protected void hideKeyboard() {
         driver.hideKeyboard();
+        driver.getKeyboard();
     }
 
 
