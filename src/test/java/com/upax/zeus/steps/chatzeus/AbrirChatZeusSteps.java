@@ -1,6 +1,7 @@
 package com.upax.zeus.steps.chatzeus;
 
 
+import com.upax.zeus.page.home.HomeZeusPage;
 import com.upax.zeus.page.login.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 public class AbrirChatZeusSteps {
 
     private final LoginPage loginPage;
+    private final HomeZeusPage homeZeusPage;
 
     @Given("El usuario ingresa a Zeus utilizando su llave maestra")
     public void el_usuario_ingresa_a_zeus_utilizando_su_llave_maestra() {
@@ -18,6 +20,7 @@ public class AbrirChatZeusSteps {
     }
     @When("El usuario hace tap sobre el icono de chat en la parte inferior del app")
     public void el_usuario_hace_tap_sobre_el_icono_de_chat_en_la_parte_inferior_del_app() {
+        homeZeusPage.abrirChatZeus();
 
     }
     @Then("Aparece el splash screen e ingresa a todos los posts del día.")
