@@ -38,5 +38,15 @@ public class ChatZeusPage extends BasePage {
         tap(chatLocator.chatZeusSendButton);
     }
 
+    public void enviarMensajeVoz(String textoMensaje){
+
+        try {
+            largeTap(chatLocator.chatZeusSendButton);
+           // tap(chatLocator.chatZeusAttachSendButton);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }

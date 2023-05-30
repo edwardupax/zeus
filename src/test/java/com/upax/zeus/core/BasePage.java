@@ -254,5 +254,15 @@ public class BasePage {
         driver.navigate().back();
     }
 
+    protected void largeTap(WebElement element) throws InterruptedException {
+        Rectangle rect = element.getRect();
+        int x = rect.x;
+        int y = rect.y;
+        TouchAction touchAction = new TouchAction(driver);
+        touchAction.longPress(PointOption.point(x, y))
+                .waitAction(new WaitOptions().withDuration(Duration.ofSeconds(2)))
+                .perform();
+    }
+
 
 }

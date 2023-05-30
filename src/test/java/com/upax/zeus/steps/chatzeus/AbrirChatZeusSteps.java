@@ -50,6 +50,11 @@ public class AbrirChatZeusSteps {
         chatZeusPage.escribirMensajeYEnviar("Mensaje de prueba");
     }
 
+    @When("El usuario graba envia mensaje de voz")
+    public void el_usuario_graba_envia_mensaje_de_voz() {
+        chatZeusPage.enviarMensajeVoz("Mensaje de prueba");
+    }
+
 
     @Then("Aparece el splash screen e ingresa a todos los posts del día.")
     public void aparece_el_splash_screen_e_ingresa_a_todos_los_posts_del_día() {
