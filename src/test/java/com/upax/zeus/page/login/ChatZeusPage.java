@@ -24,6 +24,12 @@ public class ChatZeusPage extends BasePage {
         searchKeyAndroid(chatLocator.chatzeusSearchBar);
 
     }
+
+    public void escribirNuevoMensajeAUnGrupo(String numeroUsuario){
+        sendKeys(chatLocator.chatzeusSearchBar, numeroUsuario);
+        searchKeyAndroid(chatLocator.chatzeusSearchBar);
+
+    }
     public void seleccionarChat(){
         tap(chatLocator.chatZeusUniqueResult);
     }

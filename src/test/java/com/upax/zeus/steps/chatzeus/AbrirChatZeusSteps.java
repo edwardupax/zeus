@@ -35,6 +35,11 @@ public class AbrirChatZeusSteps {
         chatZeusPage.escribirNuevoMensajeAUsuario("10040494");
     }
 
+    @When("EL usuario envia mensaje de texto a un grupo")
+    public void eL_usuario_envia_mensaje_de_texto_a_un_grupo() {
+        chatZeusPage.escribirNuevoMensajeAUnGrupo("QA Automatizadores");
+    }
+
     @When("El usuario selecciona el chat")
     public void el_usuario_selecciona_el_chat() {
         chatZeusPage.seleccionarChat();
