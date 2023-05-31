@@ -16,9 +16,9 @@ public class AbrirChatZeusSteps {
     private final HomeZeusPage homeZeusPage;
     private final ChatZeusPage chatZeusPage;
 
-    @Given("El usuario ingresa a Zeus utilizando su llave maestra")
-    public void el_usuario_ingresa_a_zeus_utilizando_su_llave_maestra() {
-            loginPage.setLLaveMaestra("10040622");
+    @Given("El usuario ingresa a Zeus utilizando su llave maestra {string}")
+    public void el_usuario_ingresa_a_zeus_utilizando_su_llave_maestra(String llaveMaestra) {
+            loginPage.setLLaveMaestra(llaveMaestra);
     }
     @When("El usuario hace tap sobre el icono de chat en la parte inferior del app")
     public void el_usuario_hace_tap_sobre_el_icono_de_chat_en_la_parte_inferior_del_app() {
