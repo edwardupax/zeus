@@ -39,4 +39,15 @@ public class ChatZeusLocator extends BaseLocator {
     @AndroidFindBy(xpath="//android.widget.TextView[@text='Audio']")
     public WebElement chatZeusAttachAudioButton;
 
+    @AndroidFindBy(xpath = "(//android.widget.ImageView[@resource-id='com.google.android.documentsui:id/icon_thumb'])[1]")
+    public WebElement firstPhoto;
+
+    @AndroidFindBy(xpath = "//android.widget.ImageView[3]")
+    public WebElement sendMediaButton;
+
+    @AndroidFindBy(id = "com.upax.zeusgeneric:id/iv_image")
+    public WebElement imageSent;
+
+
+
 }
