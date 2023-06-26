@@ -92,5 +92,10 @@ public class ChatZeusPage extends BasePage {
         waitForVisibility(chatLocator.imageSent);
     }
 
+    public String getTextoUltimoChat(){
+        waitForVisibility(chatLocator.chatTexto);
+        return chatLocator.chatTexto.getText();
+    }
+
 
 }

@@ -9,15 +9,25 @@ public class HomeZeusPage extends BasePage {
 
     HomeZeusLocator locator = new HomeZeusLocator();
 
-    public HomeZeusPage(){
-        PageFactory.initElements(new AppiumFieldDecorator(getDriver()),this.locator);
+    public HomeZeusPage() {
+        PageFactory.initElements(new AppiumFieldDecorator(getDriver()), this.locator);
     }
 
-    public void abrirChatZeus(){
+    private void buscarModulo(String modulo) {
+        tap(locator.buscarZeusSearchBar);
+        sendKeys(locator.searchText, modulo);
+        enterKeyAndroid();
+        tap(locator.getTextViewElement(modulo));
+    }
+
+    public void abrirChatZeus() {
         tap(locator.chatZeus);
         waitFixedTime(5);
     }
 
+    public void abrirRedSocial() {
+        buscarModulo("Red Social");
+    }
 
 
 }
