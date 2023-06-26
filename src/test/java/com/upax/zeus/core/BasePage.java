@@ -20,6 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
@@ -55,6 +56,10 @@ public class BasePage {
             Assert.fail(e.getMessage());
             return null;
         }
+    }
+
+    protected  void waitForVisibilityAllElements(List<WebElement> elements){
+        waitExpectedConditions(ExpectedConditions.visibilityOfAllElements(elements));
     }
 
     protected void waitExpectedConditions(ExpectedCondition<?> condition) {
@@ -118,6 +123,10 @@ public class BasePage {
 
     protected void enterKeyAndroid(WebElement element) {
         tap(element);
+        ((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.ENTER));
+    }
+
+    protected void enterKeyAndroid() {
         ((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.ENTER));
     }
 
@@ -250,7 +259,7 @@ public class BasePage {
         touchAction.tap(PointOption.point(x, y)).perform();
     }
 
-    protected void goBack(){
+    protected void goBack() {
         driver.navigate().back();
     }
 

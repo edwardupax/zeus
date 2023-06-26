@@ -83,7 +83,8 @@ public class Config {
         return PROPS.getProperty("apps");
     }
 
-
-
+    public static String getNoReset(){
+        return PROPS.getProperty("noReset");
+    }
 
 }

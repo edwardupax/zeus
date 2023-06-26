@@ -48,6 +48,9 @@ public class ChatZeusLocator extends BaseLocator {
     @AndroidFindBy(id = "com.upax.zeusgeneric:id/iv_image")
     public WebElement imageSent;
 
+    @AndroidFindBy(id = "com.upax.zeusgeneric:id/tv_text")
+    public WebElement chatTexto;
+
 
 
 }
