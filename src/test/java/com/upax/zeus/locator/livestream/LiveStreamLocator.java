@@ -18,6 +18,9 @@ public class LiveStreamLocator extends BaseLocator {
     @AndroidFindBy(id = "com.upax.zeusgeneric:id/zsl_is_btn_close")
     public WebElement cerrarTutorialButton;
 
+    @AndroidFindBy(xpath = "(//android.widget.TextView[@resource-id='com.upax.zeusgeneric:id/zsl_item_sche_name'])[last()]")
+    public WebElement ultimoLiveStreamItem;
+
 
 
 
