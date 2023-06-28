@@ -17,4 +17,12 @@ public class RedSocialPage extends BasePage {
         tap(locator.grupoIcon);
     }
 
+    public void abrirCentroNotificaciones(){
+        tap(locator.notificacionesIcon);
+    }
+
+    public void hacerPublicacion(){
+        tap(locator.queEstasPensandoText);
+    }
+
 }

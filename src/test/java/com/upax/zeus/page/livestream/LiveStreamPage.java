@@ -37,4 +37,11 @@ public class LiveStreamPage extends BasePage {
         verifyLiveStreamIsVisible();
         tap(locator.agregarLiveStreamButton);
     }
+
+    public String getUltimoLiveStream(){
+        waitForVisibility(locator.ultimoLiveStreamItem);
+        return locator.ultimoLiveStreamItem.getText();
+    }
+
+
 }

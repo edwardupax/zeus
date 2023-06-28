@@ -23,6 +23,10 @@ public class ChatZeusPage extends BasePage {
         tap(chatLocator.chatZeusButton);
     }
 
+    public void tapBackButton(){
+        tap(chatLocator.backButton);
+    }
+
     public void escribirNuevoMensaje() {
         tap(chatLocator.newChatButton);
     }
