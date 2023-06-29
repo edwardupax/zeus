@@ -1,6 +1,7 @@
 package com.upax.zeus.steps.chatzeus;
 
 
+import com.upax.zeus.core.Config;
 import com.upax.zeus.page.home.HomeZeusPage;
 import com.upax.zeus.page.login.ChatZeusPage;
 import com.upax.zeus.page.login.LoginPage;
@@ -18,7 +19,9 @@ public class AbrirChatZeusSteps {
 
     @Given("El usuario ingresa a Zeus utilizando su llave maestra {string}")
     public void el_usuario_ingresa_a_zeus_utilizando_su_llave_maestra(String llaveMaestra) {
-            loginPage.setLLaveMaestra(llaveMaestra);
+          if(!Boolean.parseBoolean(Config.getNoReset())) {
+              loginPage.setLLaveMaestra(llaveMaestra);
+          }
     }
     @When("El usuario hace tap sobre el icono de chat en la parte inferior del app")
     public void el_usuario_hace_tap_sobre_el_icono_de_chat_en_la_parte_inferior_del_app() {

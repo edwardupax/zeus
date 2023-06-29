@@ -9,11 +9,15 @@ public class ChatZeusLocator extends BaseLocator {
 
     @AndroidFindBy(id="com.upax.zeusgeneric:id/ZChatZeus")
     public WebElement chatZeusButton;
+
     @AndroidFindBy(id="com.upax.zeusgeneric:id/action_new_chat")
     public WebElement newChatButton;
 
     @AndroidFindBy(id="com.upax.zeusgeneric:id/wz_edit_search_group")
     public WebElement chatzeusSearchBar;
+
+    @AndroidFindBy(accessibility = "Navigate up")
+    public WebElement backButton;
 
     @AndroidFindBy(id="com.upax.zeusgeneric:id/wz_chat_name")
     public WebElement chatZeusUniqueResult;
@@ -50,6 +54,9 @@ public class ChatZeusLocator extends BaseLocator {
 
     @AndroidFindBy(id = "com.upax.zeusgeneric:id/iv_image")
     public WebElement imageSent;
+
+    @AndroidFindBy(id = "com.upax.zeusgeneric:id/tv_text")
+    public WebElement chatTexto;
 
     @AndroidFindBy(id = "com.google.android.documentsui:id/action_menu_select")
     public WebElement selectButtonFromExplorer;

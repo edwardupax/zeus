@@ -19,7 +19,7 @@ Feature: Utilizar el modulo chat zeus
     And El usuario escribe y envia mensaje de texto
 
 
-  @regression @only
+  @regression
   Scenario: Abrir el modulo de Chat Zeus y enviar una imagen a un grupo
     Given El usuario ingresa a Zeus utilizando su llave maestra "10040622"
     When El usuario hace tap sobre el icono de chat en la parte inferior del app

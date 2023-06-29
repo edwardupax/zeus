@@ -30,6 +30,10 @@ public class ChatZeusPage extends BasePage {
         tap(chatLocator.chatZeusButton);
     }
 
+    public void tapBackButton(){
+        tap(chatLocator.backButton);
+    }
+
     public void escribirNuevoMensaje() {
         tap(chatLocator.newChatButton);
     }
@@ -164,6 +168,11 @@ public class ChatZeusPage extends BasePage {
         ifIsAvaiableTap(chatLocator.photoSeven);
         ifIsAvaiableTap(chatLocator.photoEight);
         continueNavigating();
+    }
+
+    public String getTextoUltimoChat(){
+        waitForVisibility(chatLocator.chatTexto);
+        return chatLocator.chatTexto.getText();
     }
 
 
