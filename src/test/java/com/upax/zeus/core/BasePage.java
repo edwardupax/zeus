@@ -264,6 +264,7 @@ public class BasePage {
     }
 
     protected void largeTap(WebElement element) throws InterruptedException {
+        waitForVisibility(element);
         Rectangle rect = element.getRect();
         int x = rect.x;
         int y = rect.y;
@@ -272,6 +273,30 @@ public class BasePage {
                 .waitAction(new WaitOptions().withDuration(Duration.ofSeconds(2)))
                 .perform();
     }
+
+    protected boolean isElementPresent(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+
+    }
+
+    protected boolean isElementSelected(WebElement element) {
+        try {
+            return element.isSelected();
+        } catch (Exception e) {
+            return false;
+        }
+
+    }
+
+    protected void ifIsAvaiableTap(WebElement element) {
+        if(!isElementSelected(element))
+        tap(element);
+    }
+
 
 
 }

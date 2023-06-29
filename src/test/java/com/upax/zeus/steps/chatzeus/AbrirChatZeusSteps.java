@@ -58,6 +58,14 @@ public class AbrirChatZeusSteps {
         chatZeusPage.enviarMensajeVoz("Mensaje de prueba");
     }
 
+    @When("El usuario envia un documento")
+    public void el_usuario_envia_un_documento() {
+        chatZeusPage.cargardocumento("documento.pdf");
+        chatZeusPage.seleccionarBotonAdjuntar();
+        chatZeusPage.seleccionarDocumento();
+        chatZeusPage.seleccionarDocumentoideoGaleria();
+
+    }
 
     @Then("Aparece el splash screen e ingresa a todos los posts del día.")
     public void aparece_el_splash_screen_e_ingresa_a_todos_los_posts_del_día() {
