@@ -22,7 +22,7 @@ Feature: Utilizar el submodulo Live Stream que se encuentra en el modulo Red Soc
     Then Se muestra la informacion agregada y se habilita el campo agendar
 
   @livestream @regression
-  Scenario: Validar que se permita configurar un live streaming
+  Scenario: Validar que se permita enviar por chat la programación del live
     Given El usuario ingresa a Zeus utilizando su llave maestra "10040622"
     And Ingresa al home de Zeus y hace tap sobre el modulo Red Social
     When El usuario hace tap sobre el grupo donde es administrador
@@ -53,7 +53,15 @@ Feature: Utilizar el submodulo Live Stream que se encuentra en el modulo Red Soc
     Then Se muestra el live creado anteriormente
 
   @livestream @regression @only
-  Scenario: Validar que se muestren las notificaciones cuando me arroban en una publicación
+  Scenario: Validar que se muestren las notificaciones cuando hacen una publicacion publicación
+    Given El usuario ingresa a Zeus utilizando su llave maestra "10040622"
+    And Ingresa al home de Zeus y hace tap sobre el modulo Red Social
+    And Se realiza una publicacion en el grupo donde eres administrador
+    When El usuario hace tap en el centro de notificaciones
+    Then Se muestra la pantalla con las notificaciones recibidas
+
+  @livestream @regression
+  Scenario: Validar que la notificación tenga la descripción solicitada cuando me mencionan en una publicacion
     Given El usuario ingresa a Zeus utilizando su llave maestra "10040622"
     And Ingresa al home de Zeus y hace tap sobre el modulo Red Social
     And Se realiza una publicacion donde se arroja una notificacion al usuario

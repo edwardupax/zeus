@@ -1,4 +1,4 @@
-package com.upax.zeus.steps.login;
+package com.upax.zeus.steps.notificaciones;
 
 import com.upax.zeus.page.notificaciones.NotificacionesPage;
 import com.upax.zeus.page.redsocial.PublicacionPage;
@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class ConsultarNotificacionesSteps {
+public class ConsultaNotificacionEtiquetadaSteps {
 
     private final RedSocialPage redSocialPage;
     private final NotificacionesPage notificacionesPage;
