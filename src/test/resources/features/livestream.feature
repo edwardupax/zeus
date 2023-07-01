@@ -52,7 +52,7 @@ Feature: Utilizar el submodulo Live Stream que se encuentra en el modulo Red Soc
     And El usuario hace tap en el boton back hasta regresar al submodulo de Live Stream
     Then Se muestra el live creado anteriormente
 
-  @livestream @regression @only
+  @livestream @regression
   Scenario: Validar que se muestren las notificaciones cuando hacen una publicacion publicación
     Given El usuario ingresa a Zeus utilizando su llave maestra "10040622"
     And Ingresa al home de Zeus y hace tap sobre el modulo Red Social
