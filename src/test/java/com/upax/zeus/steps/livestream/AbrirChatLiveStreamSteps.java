@@ -31,6 +31,6 @@ public class AbrirChatLiveStreamSteps {
     @Then("Se muestra en el chat zeus con la informacion del live creado")
     public void se_muestra_en_el_chat_zeus_con_la_informacion_del_live_creado() {
         String textoUltimoChat = chatZeusPage.getTextoUltimoChat();
-        Truth.assertThat(textoUltimoChat).contains("Prueba QA");
+        Truth.assertThat(textoUltimoChat).contains("QA Automatizado");
     }
 }
